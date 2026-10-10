@@ -13,6 +13,8 @@ import rospy
 import numpy as np
 from math import pi
 
+import _bootstrap  # noqa: F401  (puts src/ on sys.path)
+
 from core.interfaces import ArmController
 
 rospy.init_node('demo')

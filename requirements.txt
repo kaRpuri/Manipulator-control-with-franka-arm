@@ -1,0 +1,15 @@
+# Pure-Python dependencies of src/lib (kinematics, planners, collision checking).
+numpy~=1.24
+scipy~=1.10
+matplotlib~=3.7
+
+# Imported by src/core/interfaces.py. On a ROS Noetic machine this is already
+# provided by the system python3-opencv package that cv_bridge depends on.
+opencv-python~=4.8
+
+# NOT installable with pip. The ROS-facing modules (src/core/, scripts/, and the
+# ros/ package) additionally need a ROS Noetic install with:
+#   rospy, tf, roslib, cv_bridge, image_geometry, gazebo_msgs, geometry_msgs,
+#   sensor_msgs, std_msgs, std_srvs, visualization_msgs, apriltag_ros,
+#   franka_interface, franka_core_msgs (franka_ros_interface)
+# plus the catkin-built meam520_labs message package in ros/meam520_labs.

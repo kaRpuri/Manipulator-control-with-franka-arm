@@ -4,6 +4,8 @@ import numpy as np
 from math import pi
 from time import perf_counter
 
+import _bootstrap  # noqa: F401  (puts src/ on sys.path)
+
 from core.interfaces import ArmController
 from lib.potentialFieldPlanner import PotentialFieldPlanner 
 
@@ -33,7 +35,7 @@ if __name__ == "__main__":
     print("Running test "+sys.argv[1])
     print("Moving to Start Position")
     arm.safe_move_to_position(starts[index])
-    map_struct = loadmap("../../maps/"+mapNames[index] + ".txt")
+    map_struct = loadmap(str(_bootstrap.MAPS / (mapNames[index] + ".txt")))
     print("Map = "+ mapNames[index])
 
     print("Starting to plan")

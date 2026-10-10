@@ -5,6 +5,8 @@ import tf
 
 from geometry_msgs.msg import TwistStamped
 
+import _bootstrap  # noqa: F401  (puts src/ on sys.path)
+
 from core.interfaces import ArmController
 
 from lib.calcJacobian import calcJacobian
