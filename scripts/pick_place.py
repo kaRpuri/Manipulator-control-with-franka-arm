@@ -5,6 +5,8 @@ from math import pi
 
 import rospy
 # Common interfaces for interacting with both the simulation and real environments!
+import _bootstrap  # noqa: F401  (puts src/ on sys.path)
+
 from core.interfaces import ArmController
 from core.interfaces import ObjectDetector
 

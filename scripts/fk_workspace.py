@@ -1,5 +1,6 @@
+import _bootstrap  # noqa: F401  (puts src/ on sys.path)
+
 from lib.calculateFK import FK
-from core.interfaces import ArmController
 
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D

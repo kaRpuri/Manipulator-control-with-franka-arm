@@ -8,6 +8,8 @@ import tf
 import geometry_msgs.msg
 
 
+import _bootstrap  # noqa: F401  (puts src/ on sys.path)
+
 from core.interfaces import ArmController
 
 from lib.calculateFK import FK

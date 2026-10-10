@@ -279,7 +279,9 @@ def rrt(map, start, goal):
     return np.array(path)
 
 if __name__ == '__main__':
-    map_struct = loadmap("/home/student/meam520_ws/src/meam520_labs/maps/map1.txt")
+    from pathlib import Path
+    maps_dir = Path(__file__).resolve().parents[2] / "maps"
+    map_struct = loadmap(str(maps_dir / "map1.txt"))
     start = np.array([0,-1,0,-2,0,1.57,0])
     goal =  np.array([-1.2, 1.57 , 1.57, -2.07, -1.57, 1.57, 0.7])
     path = rrt(deepcopy(map_struct), deepcopy(start), deepcopy(goal))

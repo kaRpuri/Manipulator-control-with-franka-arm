@@ -18,7 +18,8 @@ from gazebo_msgs.srv import SpawnModel
 spawn_model_client = rospy.ServiceProxy('/gazebo/spawn_sdf_model', SpawnModel)
 
 
-path = os.path.expanduser('~/meam520_ws/src/meam520_labs/ros/meam520_labs/urdf/cube.xacro')
+path = os.path.join(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'urdf', 'cube.xacro')
 command = 'rosrun xacro xacro '+path+' color:='
 colors = ["'.8 .8 .8 1'","'.8 .8 .1 1'"]
 xmls = [subprocess.check_output(command+color,shell=True).decode('utf-8') for color in colors]

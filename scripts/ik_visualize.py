@@ -10,6 +10,8 @@ import geometry_msgs.msg
 import visualization_msgs
 from tf.transformations import quaternion_from_matrix
 
+import _bootstrap  # noqa: F401  (puts src/ on sys.path)
+
 from core.interfaces import ArmController
 
 from lib.IK_position_null import IK
