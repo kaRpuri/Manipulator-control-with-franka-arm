@@ -1,9 +1,5 @@
 # Manipulator Control with a 7-DOF Franka Arm
 
-Kinematics, motion planning, and vision code for the 7-DOF Franka Emika Panda arm,
-written for the MEAM 520 (Introduction to Robotics) lab sequence at the University
-of Pennsylvania.
-
 ## Demo
 
 ![RRT path on map1](assets/demo.gif)
@@ -55,8 +51,7 @@ pull each joint toward its goal position, repulsive forces push it off nearby ob
 boxes, the forces are mapped to joint torques, and a random walk fires when the planner
 detects a collision or a local minimum.
 
-**Vision.** `ros/meam520_labs/scripts/getBlockPose.py` reads AprilTag detections, shifts
-each tag to its cube's centre, rotates the six faces into a common frame, averages the
+**Vision.**  reads AprilTag detections, shifts each tag to its cube's centre, rotates the six faces into a common frame, averages the
 tags seen on the same cube, and publishes `BlockDetectionArray`. Tag IDs above 47 mark
 cubes on the spinning turntable, so static and moving blocks are distinguished by ID.
 `ObjectDetector` in `src/core/interfaces.py` is the client side: it returns block poses in
